@@ -63,7 +63,7 @@ public abstract class AbstractDAO<T> {
             StringBuilder names = new StringBuilder();
             StringBuilder values = new StringBuilder();
 
-            // insert into t (name,age) values("..",..)
+
 
             for (Field f : fields) {
                 if (f != id) {
@@ -110,7 +110,7 @@ public abstract class AbstractDAO<T> {
 
             sb.deleteCharAt(sb.length() - 1);
 
-            // update t set name = "aaaa", age = "22" where id = 5
+
             String sql = "UPDATE " + table + " SET " + sb.toString() + " WHERE " +
                     id.getName() + " = \"" + id.get(t) + "\"";
 
